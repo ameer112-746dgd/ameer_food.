@@ -1,0 +1,281 @@
+<!--<!DOCTYPE html>
+<html>
+<head>
+  <title>Order Confirmation</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+    }
+
+    .confirmation-message {
+      font-size: 7em;
+      font-weight: bold;
+      text-align: center;
+      margin-top: 50px;
+    }
+
+    .product-details {
+      margin-top: 30px;
+      text-align: center;
+    }
+
+    .product-name {
+      font-size: 20px;
+      font-weight: bold;
+      font-size: 3em;
+    }
+
+    .product-quantity {
+      font-size: 2em;
+      margin-top: 15px;text-align: center;
+    }
+
+    .product-image {
+      max-width: 300px;
+      margin-top: 30px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+  </style>
+ 
+   
+</head>
+<body>
+  <div class="confirmation-message">
+  Congratulations your order have being Confirmed!
+  </div>
+
+  <div class="product-details">
+    <div class="product-name">
+      Product ID: <span id="product"></span>
+    </div>
+    <div class="product-quantity">
+    Total Cost: <span id="product-price"></span>
+    </div>
+      <img id="product-image" src="" alt="Product Image">
+  </div>
+  <script>
+    const products = [ {
+      id: 1,
+      name: "Cheesy Bacon Burger",
+      description: "A mouthwatering burger with a juicy beef patty, melted cheese, and crispy bacon.",
+      price: "$10.99",
+      rating: "⭐⭐⭐⭐⭐",
+      thumbnail: "New food/Cheesy Bacon Burger.jpeg"
+      },
+      {
+      id: 2,
+      name: "Veggie Delight Wrap",
+      description:"A flavorful wrap filled with fresh vegetables, hummus, and tangy dressing.",
+      price: "$8.99",
+      rating: "⭐⭐⭐⭐",
+      thumbnail: "New food/Veggie Delight Wrap.jpeg"
+      },
+      {
+      id: 3,
+      name :"Chocolate Lava Cake",
+      description:"A decadent chocolate cake with a molten, gooey center.",
+      price: "$6.99",
+      rating: "⭐⭐⭐⭐⭐",
+      thumbnail:"New food/Chocolate Lava Cake.jpeg"
+      },
+      {
+      id: 4,
+      Name: "Pad Thai",
+      description: "Embark on a culinary journey with this iconic Thai dish.",
+      Price: "$10.99",
+      rating: "⭐⭐⭐⭐⭐",
+      thumbnail: "New food/Pad Thai.jpeg"
+      },
+      {
+      id: 5,
+      Name: "Tacos al Pastor",
+      description: "Transport yourself to the streets of Mexico with these flavorful tacos.",
+      Price: "$2.99 per taco",
+      Rating: "⭐⭐⭐⭐⭐",
+      thumbnail: "New food/taco1.jpeg"
+      },
+      {
+      id: 6,
+      Name: "Gyoza",
+      description: "Experience a burst of flavors with these crispy and juicy Japanese dumplings.",
+      Price: "$6.99 for 6 pieces",
+      rating: "⭐⭐⭐⭐",
+      thumbnail:  "New food/Gyoza.jpeg"
+      },
+     
+      {
+      id: 7,
+      name: "Sushi Rolls",
+      description:"Fresh seafood and vegetables wrapped in seasoned rice and seaweed.",
+      price: "$14.99",
+      rating: "⭐⭐⭐⭐⭐",
+      thumbnail: "New food/Sushi Rolls.jpeg"
+      },
+      {
+      id: 8,
+      name: "Chicken Tikka Masala",
+      description: "Tender chicken cooked in a rich and creamy tomato-based sauce.",
+      price: "$11.99",
+      pating: "⭐⭐⭐⭐",
+      thumbnail: "New food/Chicken Tikka Masala.jpeg"
+      },
+      {
+      id: 9,
+      name: "Lobster Roll",
+      description: "Treat yourself to a taste of luxury with this decadent lobster roll. The tender lobster meat, creamy mayo, and buttery roll come together to create a truly indulgent experience.",
+      price: "$19.99",
+      rating : "⭐⭐⭐⭐⭐",
+      thumbnail: "New food/Lobster Roll.jpeg"
+      },
+      ]; 
+       
+        
+        // Function to extract URL parameters
+        function getParameterByName(name, url) {
+            if (!url) url = window.location.href;
+            name = name.replace(/[[\]]/g, '\\$&');
+            var regex = new RegExp('[?&]' + name + '(=([^&#]*)|&|#|$)'),
+                results = regex.exec(url);
+            if (!results) return null;
+            if (!results[2]) return '';
+            return decodeURIComponent(results[2].replace(/\+/g, ' '));
+        }
+        
+        // Extract the product ID and quantity from the URL
+        const productId = getParameterByName('product_id');
+        const quantity = getParameterByName('quantity');
+        
+        // Display the product image, quantity, and calculated price
+       /// document.getElementById('product-image').src = getProductImage(thumbnail);
+       // document.getElementById('quantity').textContent = quantity;
+        //document.getElementById('price').textContent = calculatePrice(productId, quantity);
+
+        // Get the URL parameters
+const urlParams = new URLSearchParams(window.location.search);
+
+// Retrieve the product details from the URL parameters
+
+const price= urlParams.get('price');
+const pid = urlParams.get("product")
+const thumbnail = urlParams.get("product-image")
+/*
+const productName = urlParams.get('name');
+const productDescription = urlParams.get('description');
+const productPrice = urlParams.get('price');
+const productRating = urlParams.get('rating');
+const productThumbnail = urlParams.get('thumbnail');
+*/
+// Display the product details on the confirmation page
+document.getElementById('product').textContent = pid;
+//document.getElementById('product-description').textContent = productDescription;
+document.getElementById('product-price').textContent = price;
+//document.getElementById('product-rating').textContent = productRating;
+
+const productImage = document.getElementById("thumbnail");
+document.getElementById('product-image').src =thumbnail;
+
+
+//document.getElementById('product-image').src = getProductImage(thumbnail);
+
+  </script>
+</body>
+</html> -->
+
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Order Confirmation</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: rgb(255, 255, 255);
+    }
+
+    .confirmation-message {
+      font-size: 7em;
+      font-weight: bold;
+      text-align: center;
+      margin-top: 50px;
+      color: rgb(0, 0, 0);
+    }
+
+    .product-details {
+      margin-top: 30px;
+      text-align: center;
+    }
+
+    .product-name {
+      font-size: 20px;
+      font-weight: bold;
+      font-size: 3em;
+      color: rgb(0, 0, 0);
+    }
+
+    .product-quantity {
+      font-size: 2em;
+      margin-top: 15px;
+      text-align: center;
+      color: rgb(0, 0, 0);
+
+    }
+
+    .product-image {
+      max-width: 300px;
+      margin-top: 30px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    .home{
+      text-align: center;
+    }
+    a{
+      text-decoration: none;
+      color: rgb(247, 7, 7);
+    }
+  </style>
+  
+</head>
+<body>
+  <div class="confirmation-message">
+    Congratulations, your order has been confirmed!
+  </div>
+
+  <div class="product-details">
+    <div class="product-name">
+      Product ID: <span id="product"></span>
+    </div>
+    <div class="product-quantity">
+      Total Cost: <span id="product-price"></span>
+    </div>
+    <img id="product_image" src="thumbnail" alt="Product Image">
+  </div>
+  <p class="home"><a href="index.html" class="nav-link">click here to go back to home page</a><p>
+
+  <script>
+    // Function to extract URL parameters
+    function getParameterByName(name, url) {
+      if (!url) url = window.location.href;
+      name = name.replace(/[[\]]/g, '\\$&');
+      var regex = new RegExp('[?&]' + name + '(=([^&#]*)|&|#|$)'),
+          results = regex.exec(url);
+      if (!results) return null;
+      if (!results[2]) return '';
+      return decodeURIComponent(results[2].replace(/\+/g, ' '));
+    }
+
+    // Get the URL parameters
+    const productId = getParameterByName('product');
+    const price = getParameterByName('price');
+    const thumbnail = getParameterByName('product_image');
+
+    
+
+    // Display the product details on the confirmation page
+    document.getElementById('product').textContent = productId;
+    document.getElementById('product-price').textContent ="$"+ price;
+    document.getElementById('product_image').src = thumbnail;
+  </script>
+</body>
+</html>
+

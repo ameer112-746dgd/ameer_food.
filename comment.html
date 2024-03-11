@@ -1,0 +1,310 @@
+	<!-- <div class="card" style="width: 18rem;">
+			<img src="your-image.jpg" class="card-img-top" alt="Image">
+			<div class="card-body">
+			  <h5 class="card-title">Card Title</h5>
+			  <p class="card-text">Some quick example text to give more information about the card.</p>
+			  <a href="#" class="btn btn-primary">Read More</a>
+			</div>
+
+        
+		 <div class="column rounded text-dark rounded bg-light">
+
+		<div class="card" style="width: 100%">
+
+			<img src="images/Amala.jpg.jpeg" alt="resturant" height="200" class="card-img-bottom" onclick="showSrc()" /> 
+			<div class="card-body">
+				<h4 class="card-title">Amala</h4>
+				<p class="card-text"> Amala with fish and smoking meat 
+					<a href="#" class="btn btn-danger">Order </a>
+				</p>
+
+			</div>
+		    </div>
+
+			<div class="row">
+<div class="column"> </div>
+<div class="column"> </div>
+<div class="column"> </div>
+<div class="column"> </div>
+			</div>
+
+<div class="row">
+<div class="column"> </div>
+<div class="column"> </div>
+<div class="column"> </div>
+<div class="column"> </div>
+			</div>
+
+<div class="row">
+<div class="column"> </div>
+<div class="column"> </div>
+<div class="column"> </div>
+<div class="column"> </div>
+			</div>
+		  
+	</div> */
+	if (counter > 0 && counter % 4 === 0) {
+		rows.push(divRow);
+		divRow = document.createElement("div");
+		let c = "counter" + counter;
+		divRow.classList.add("row", c);
+	  }         
+
+const productElement = document.createElement("div");
+productElement.classList.add("column", "rounded", "text-dark", "bg-light");
+
+const cardDiv = document.createElement("div");
+cardDiv.classList.add("card");
+productElement.appendChild(cardDiv);
+
+const cardBod = document.createElement("div");
+cardBod.classList.add("card-body");
+cardDiv.appendChild(cardBod);
+
+const h4Tag = document.createElement("h4");
+h4Tag.classList.add("card-title");
+h4Tag.textContent = product.title;
+cardBod.appendChild(h4Tag);
+
+const pTag = document.createElement("p");
+pTag.classList.add("card-text");
+pTag.textContent = product.description;
+cardBod.appendChild(pTag);
+
+const HTag = document.createElement("a");
+HTag.href = window.location.href.replace("index.html", "pro.html") + "?id=" + product.id;
+HTag.classList.add("btn", "btn-danger");
+HTag.textContent = "Order";
+cardBod.appendChild(HTag);
+
+const imageElement = document.createElement("img");
+			  imageElement.classList.add("card-img-bottom")
+			
+			  imageElement.onClick = "showSrc()"
+			  imageElement.src = product.thumbnail;
+			  cardDiv.appendChild(imageElement);
+
+			/*  const productElement = document.createElement("div");
+			  productElement.classList.add("column","rounded","text-dark", "bg-light");
+		      const cardDiv = document.createElement("div")
+			  cardDiv.classList.add("card")
+              productElement.appendChild(cardDiv)
+			  const cardBod = document.createElement("div")
+			  cardBod.classList.add("card-body")
+			  cardDiv.appendChild(cardBod)
+			  const h4Tag = document.createElement("h4")
+			  h4Tag.classList.add("card-title")
+			  h4Tag.textContent = product.title
+			  cardBod.appendChild(h4Tag)
+			  const pTag = document.createElement("P")
+			  pTag.classList.add("card-text")
+			  pTag.textContent = product.description;
+			  cardBod.appendChild(pTag)
+			  const HTag = document.createElement("a")
+			  HTag.href = window.location.href.replace("index.html","pro.html") +"?id="+product.id
+			  HTag.classList.add("btn", "btn-danger")
+			  HTag.textContent = "Order"
+			  pTag.appendChild(HTag)*/
+
+			  // Create an image element
+			  
+		
+
+			  /*
+			  // Create a title element
+			  const titleElement = document.createElement("h2");
+			  titleElement.textContent = product.title;
+			  productElement.appendChild(titleElement);
+		
+			  // Create a description element
+			  const descriptionElement = document.createElement("p");
+			  descriptionElement.textContent = product.description;
+			  productElement.appendChild(descriptionElement);
+		
+			  // Create a price element
+			  const priceElement = document.createElement("p");
+			  const discountedPrice = product.price - (product.price * (product.discountPercentage / 100));
+			  priceElement.textContent = `Price: $${discountedPrice.toFixed(2)} (Discounted from $${product.price})`;
+			  productElement.appendChild(priceElement);
+		
+			  // Create a rating element
+			  const ratingElement = document.createElement("p");
+			  ratingElement.textContent = `Rating: ${product.rating}/5`;
+			  productElement.appendChild(ratingElement);
+		
+			  // Create a stock element
+			  const stockElement = document.createElement("p");
+			  stockElement.textContent = `Stock: ${product.stock}`;
+			  productElement.appendChild(stockElement);
+		
+			  // Create a brand element
+			  const brandElement = document.createElement("p");
+			  brandElement.textContent = `Brand: ${product.brand}`;
+			  productElement.appendChild(brandElement);
+		
+			  // Create a category element
+			  const categoryElement = document.createElement("p");
+			  categoryElement.textContent = `Category: ${product.category}`;
+			  productElement.appendChild(categoryElement);
+		*/
+
+
+/*
+		 
+            async function fetchProduct() {
+
+            }
+try{
+    
+    const  products  = await fetch("./abc.json",{mode:"no-cors"})
+    console.log(products)
+    const res = await products.json()
+    console.log(res)
+}
+catch(error) {
+    console.log(error)
+}
+*/
+
+       
+	   <div class="column rounded text-dark rounded bg-light">
+
+		<div class="card" style="width: 100%">
+
+			<img src="images/Amala.jpg.jpeg" alt="resturant" height="200" class="card-img-bottom" onclick="showSrc()" /> 
+			<div class="card-body">
+				<h4 class="card-title">Amala</h4>
+				<p class="card-text"> Amala with fish and smoking meat 
+					<a href="#" class="btn btn-danger">Order </a>
+				</p>
+
+			</div>
+		    </div>
+		  
+	</div>
+	
+	 <div class="column rounded text-dark rounded bg-light">
+	   <div class="card" style="width: 100%">
+
+		  <img src="images/Beans and plantain.jpg.jpeg" alt="resturant" height="200" class="card-img-bottom" onmouseout="returnimage()" onmouseover="changeimageOnHover()" />
+		  <div class="card-body"> 
+			<h4 class="card-title">Beans</h4>
+			<p class="card-text"> Beans and plantain
+				<a href="#" class="btn btn-danger">Order </a>
+			</p>
+
+		</div>
+		</div>
+	
+	</div>	
+		  
+	<div class="column rounded text-dark rounded bg-light">
+		<div class="card" style="width: 100%"></div>
+		 
+		  <img src="images/Cheese%20Pizza.jpg.jpeg" alt="resturant" height="200" class="class-img-bottom" /> 
+		  <div class="card-body"> 
+			<h4 class="card-title">Cheese</h4>
+			<p class="card-text">Cheese and Pizza
+				<a href="#" class="btn btn-danger">Order </a>
+			</p>
+
+		</div>
+		</div>
+	
+
+	<div class="column rounded text-dark rounded bg-light">
+		<div class="card" style="width: 100%"></div>
+		  <img src="images/Chickenand%20chip's.jpg.jpeg" alt="resturant" height="200" class="rounded"/> 
+		  <div class="card-body"> 
+			<h4 class="card-title">Chicken</h4>
+			<p class="card-text">Chicken and chip
+				<a href="#" class="btn btn-danger">Order </a>
+			</p>
+
+		</div>
+		</div>
+	
+	</div>
+
+	<div class="column rounded text-dark rounded bg-light">
+		<div class="card" style="width: 100%"></div>
+		  <img src="images/Food Cake with Three-Berry.jpg.jpeg" alt="resturant" height="200" class="rounded"/> 
+		  <div class="card-body"> 
+			<h4 class="card-title">Cake</h4>
+			<p class="card-text">food cake
+				<a href="#" class="btn btn-danger">Order </a>
+			</p>
+
+		</div>
+		</div>
+	
+	</div>
+		 
+	<div class="column rounded text-dark rounded bg-light">
+		<div class="card" style="width: 100%"></div>
+		  <img src="images/Fruit Salad.jpg.jpeg" alt="resturant" height="200" class="rounded"/> 
+		  <div class="card-body"> 
+			<h4 class="card-title">Fruit</h4>
+			<p class="card-text">Fruit Salad
+				<a href="#" class="btn btn-danger">Order </a>
+			</p>
+
+		</div>
+		</div>
+	
+	</div>
+		  
+	<div class="column rounded text-dark rounded bg-light">
+		<div class="card" style="width: 100%"></div>
+		  <img src="images/Indomie spicy.jpg.jpeg" alt="resturant" height="200" class="rounded"/> 
+		  <div class="card-body"> 
+			<h4 class="card-title">Indomie</h4>
+			<p class="card-text">Indomie spicy
+				<a href="#" class="btn btn-danger">Order </a>
+			</p>
+
+		</div>
+		</div>
+	
+	</div>
+	
+	<div class="column rounded text-dark rounded bg-light">
+		<div class="card" style="width: 100%"></div>
+		  <img src="images/Iyan and egusi.jpg.jpeg" alt="resturant" height="200" class="rounded"/> 
+		  <div class="card-body"> 
+			<h4 class="card-title">Iyan</h4>
+			<p class="card-text">iyan and egusi soup
+				<a href="#" class="btn btn-danger">Order </a>
+			</p>
+
+		</div>
+		</div>
+	
+	</div>
+  </section>	
+
+<h2 class="hs" style="color: brown">Welcome to Ameer Restaurant!</h2>
+    <p class="p">At Food Restaurant, we pride ourselves on serving delicious and mouthwatering dishes that will satisfy your cravings. Our menu features a variety of options, from appetizers to desserts, all made with fresh and high-quality ingredients.</p>
+	<style>
+		.hs {
+		  display:inline-block;
+		}
+	  </style> 
+    <h3 class="sp hs" id="fr">Our Specialties</h3>
+    <ul class="p">
+      <li>Signature Burger</li>
+      <li>Seafood Pasta</li>
+      <li>Grilled Steak</li>
+      <li>Vegetarian Delight</li>
+    </ul>
+ 
+	<h3 id="ty"> Visit Us Today </h3> 
+	<img src="images/res.jpg.jpeg" alt="resturant">
+	 <p class="p">Whether you're looking for a cozy dinner for two or a group celebration, Food Restaurant is the perfect place to indulge in delectable food and create lasting memories. Visit us today and experience the true taste of culinary excellence!</p>
+ </div>
+</section>
+ 	<style>
+		.p{
+			color: rgb(240, 237, 233);
+		}
+	</style> --->

@@ -89,12 +89,13 @@
 
     .container {
     
-      margin: 0 auto;
+    margin-top: 150px;
       padding: 20px;
       background-color: #000000;
       color: white;
-      border-radius: 5px;
+      border-radius: 10px;
       box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+      font-weight: bold;
     }
 
     h1 {
@@ -108,7 +109,7 @@
 
     label {
       font-weight: bold;
-      color: red;
+      color: hwb(0 88% 10%);
     }
 
     input[type="number"] {
@@ -140,6 +141,24 @@
         width: 20px;
       height: 20px;
     }
+    .col a {
+      color: rgb(8, 38, 235);
+      text-decoration: none;
+      
+    }
+    .foot {
+      background-color: #f2f2f2;
+      border-radius: 10px;
+      padding: 20px;
+      text-align: center;
+      font-size: 14px;
+      color: #121111;
+    }
+    
+    .foot a {
+      color: #ee0c0c;
+      text-decoration: none;
+    }
   </style>
 </head>
 <body>
@@ -152,30 +171,51 @@
       </div>
       <div class="form-group">
         <label for="productPrice">Price per item:</label>
-        <input type="number" class="form-control" id="productPrice">
+        <div class="input-group">
+          <div class="input-group-prepend">
+            <select class="custom-select" id="currencySymbol">
+              <option value="$">$</option>
+              <option value="€">€</option>
+              <option value="£">£</option>
+              <option value="₦">₦</option>
+              <!-- Add more currency symbols here -->
+            </select>
+          </div>
+          <input type="number" class="form-control" id="productPrice">
+        </div>
       </div>
-    <div class="form-group">
-      <label for="totalAmount">Total Amount:</label>
-      <input type="number" class="form-control" id="totalAmount" disabled>
-    </div>
-    <button type="submit" class="btn btn-primary">Place Order</button>
-  </form>
-</div>
+      <div class="form-group">
+        <label for="totalAmount">Total Amount:</label>
+        <input type="text" class="form-control" id="totalAmount" disabled>
+      </div>
+      <button type="submit" class="btn btn-primary">Place Order</button>
+    </form>
+    <p id="confirmationMessage"></p>
+  </div>
 
-<script>
-  // Calculate total amount based on quantity
-  document.getElementById('orderForm').addEventListener('submit', function(event) {
-    event.preventDefault();
+  <script>
+    // Calculate total amount based on quantity
+    document.getElementById('orderForm').addEventListener('submit', function(event) {
+      event.preventDefault();
 
-    var quantity = parseInt(document.getElementById('productQuantity').value);
-    var price = parseFloat(document.getElementById('productPrice').value);
+      var quantity = parseInt(document.getElementById('productQuantity').value);
+      var price = parseFloat(document.getElementById('productPrice').value);
 
-    var totalAmount = quantity * price;
-    document.getElementById('totalAmount').value = totalAmount.toFixed(2);
-  });
-</script>
+      if (!quantity || !price) {
+        document.getElementById('confirmationMessage').textContent = "Please fill in all the required fields.";
+        return;
+      }
 
-<footer class=" sake text-light bg-danger">
+      var currencySymbol = document.getElementById('currencySymbol').value;
+      var totalAmount = quantity * price;
+      document.getElementById('totalAmount').value = currencySymbol + totalAmount.toFixed(2);
+
+      document.getElementById('confirmationMessage').textContent = "Order placed successfully!";
+    });
+  </script>
+</body>
+</html>
+<footer class="foot">
 	<div class="row">
 <div class="col">
 

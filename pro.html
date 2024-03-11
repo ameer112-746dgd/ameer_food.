@@ -13,7 +13,6 @@
 	display: inline-block;
 }
 .dropdown-con {
-
 	min-width: 75px;
 	padding: 7px 10px;
 	background-color: red;
@@ -25,285 +24,192 @@
 	display:block;
 }
 
-
 </style>
-	</head>
-		
+</head>
 <body class="container bg-dark">
 
-	<header>
-		<img src="images/my-logo-Transparent.png.png" alt="resturant logo"class="logo rounded"> 
-		<h1 class="ay text-danger fw-bold bg-light ">Ameer Restaurant</h1>  
-	</header>
-	<nav>
-		<ul class="nav justify-content-center">
-			<li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
-			<li class="nav-item dd">
+<header>
+	<img src="images/my-logo-Transparent.png.png" alt="restaurant logo" class="logo rounded"> 
+	<h1 class="ay text-danger fw-bold bg-light ">Ameer Restaurant</h1>  
+</header>
+<nav>
+	<ul class="nav justify-content-center">
+		<li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
+		<li class="nav-item dd">
 			<a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Menu</a>
             <ul class="dropdown-con">
 	            <li class="dropdown-item"> <a href="african.html" class="nav-link"> African Cuisine </a></li>
 				<li class="dropdown-item"> <a href="chinese.html" class="nav-link"> Chinese Cuisine </a></li>
 				<li class="dropdown-item"> <a href="eng.html" class="nav-link"> English Cuisine </a></li>
 			</ul>
-			</li>
-			<li class="nav-item"><a href="reservation.html" class="nav-link">Reservations</a></li>
-			<li class="nav-item"><a href="contact.html" class="nav-link">Contact</a></li>
-			<li class="nav-item"><a href="about us.html" class="nav-link">About Us</a></li>
+		</li>
+		<li class="nav-item"><a href="reservation.html" class="nav-link">Reservations</a></li>
+		<li class="nav-item"><a href="contact.html" class="nav-link">Contact</a></li>
+		<li class="nav-item"><a href="about us.html" class="nav-link">About Us</a></li>
+	</ul>
+</nav> 
 
-		</ul>
-		
-	</nav> 
-		<section style="margin: 15px;">
-<div class="carousel slide" data-bs-ride="carousel">
-	<div class="carousel-inner">
+<section style="margin: 15px;">
+	<div class="carousel slide" data-bs-ride="carousel">
+		<div class="carousel-inner">
+			<div class="carousel-item active">
+				<img src="images/my3.jpg" class="d-block w-100" alt="African dining">
+			</div>
+			<div class="carousel-item">
+				<img src="images/my2.jpg" class="d-block w-100" alt="African dining">
+			</div>
+			<div class="carousel-item ">
+				<img src="images/my1.jpg " class="d-block w-100" alt="African dining">
+			</div>
+			<div class="carousel-item">
+				<img src="images/my4.jpg" class="d-block w-100" alt="African dining">
+			</div>
+			<div class="carousel-item">
+				<img src="images/my5.jpg" class="d-block w-100" alt="African dining">
+			</div>
+			<div class="carousel-item">
+				<img src="images/my6.jpeg" class="d-block w-100" alt="African dining">
+			</div>
+		</div>
+	</div>
+</section>
 
-<div class="carousel-item active">
-	<img src="images/my3.jpg" class="d-block w-100" alt="African dinning" >
-</div>
-
-<div class="carousel-item">
-	<img src="images/my2.jpg" class="d-block w-100" alt="African dinning" >
-</div>
-
-<div class="carousel-item ">
-	<img src="images/my1.jpg " class="d-block w-100" alt="African dinning" >
-</div>
-
-<div class="carousel-item">
-	<img src="images/my4.jpg" class="d-block w-100" alt="African dinning" >
-</div>
-
-<div class="carousel-item">
-	<img src="images/my5.jpg" class="d-block w-100" alt="African dinning" >
-</div>
-
-<div class="carousel-item">
-	<img src="images/my6.jpeg" class="d-block w-100" alt="African dinning" >
-</div>
-  </div>
-
-  </div>
-  </section>
-  <section class="food-menu">
+<section class="food-menu">
 	<h2 class="h2"> Available menu </h2>
-	  <div class="row ">
+	<div class="row">
 		<style>
 			.h2{
 				background-color: rgb(255, 0, 43);
 				text-align: center;
+				border-radius: 100px;
+				font-family: 'Times New Roman', Times, serif;
 			}
-		</style>
+		  .quantity-container {
+			margin-left: 15px;
+			background-color: red;
+			font-weight: bold;
+			padding: 10px;
+			border-radius: 10px;
+			width: auto;
+			font-weight: bold;
+			margin-bottom: 10px;
+		  }
+		  .mytext{
+			color: white;
+			font-weight: bold;
+		  }
+		  .col a {
+			color: rgb(29, 4, 251);
+			text-decoration: none;
+			font-weight: bold;
+		}
+      .card-text.price {
+        font-weight: bold;
+        color: #333;
+      }
+    </style>
+    <div class="pr"></div>
 
-<style>
- 
-  .quantity-container {
-    margin-left: 15px;
-    background-color: red;
-    font-weight: bold;
-    padding: 10px;
-    border-radius: 10px;
-    width: auto;
-    font-weight: bold;
-    margin-bottom: 10px;
-  }
-  .mytext{
-    color: white;
-    font-weight: bold;
-  }
-  .col a {
-    color: rgb(29, 4, 251);
-    text-decoration: none;
-    font-weight: bold;
-}
-</style>
-
-
-<script>
- 
-/*
-		 
-            async function fetchProduct() {
-
-            }
-try{
-    
-    const  products  = await fetch("./abc.json",{mode:"no-cors"})
-    console.log(products)
-    const res = await products.json()
-    console.log(res)
-}
-catch(error) {
-    console.log(error)
-}
-*/
+		<script>
+			function process_order() {
+				const query = new URLSearchParams(window.location.search);
+				const id = query.get("id");
+				const qty = document.getElementById("quantity");
+				const val = parseInt(qty.value);
+			
+				// Retrieve product information based on the ID
+				const product = products.find(item => item.id == id);
+				const price = parseFloat(product.price.replace('$', '')); // Extract price without '$'
+				const total = val * price; // Calculate the total price
+			
+				// Redirect to the confirmation page with the total price and other details
+				const img = document.querySelector(".pr_img");
+				window.location = "confirm.html?price=" + total + "&product=" + id + "&product_image=" + img.src;
+			}
+			
         </script>
+		
 		</head>
 		<body>
-     
 		  <div id="productContainer"></div>
-      
-		
+		  
 		  <script>
             const products = [
             {
               id: 1,
-              title: "iPhone 9",
-              description: "An apple mobile which is nothing like apple",
-              price: 549,
-              discountPercentage: 12.96,
-              rating: 4.69,
-              stock: 94,
-              amount: "90$",
-              brand: "Apple",
-              category: "smartphones",
-              thumbnail: "New food/taco1.jpeg"
-              
-            },
-            {
+              name: "Cheesy Bacon Burger",
+              description: "A mouthwatering burger with a juicy beef patty, melted cheese, and crispy bacon.",
+              price: "$10.99",
+              rating: "⭐⭐⭐⭐⭐",
+              thumbnail:"New food/Cheesy Bacon Burger.jpeg"
+              },
+              {
               id: 2,
-              title: "iPhone X",
-              description: "SIM-Free, Model A19211 6.5-inch Super Retina HD display with OLED technology A12 Bionic chip",
-              price: 899,
-              discountPercentage: 17.94,
-              rating: 4.44,
-              stock: 34,
-              amount: "60$",
-              brand: "Apple",
-              category: "smartphones",
-              thumbnail: "https://i.dummyjson.com/data/products/2/thumbnail.jpg"
-            },
-            {
+              name: "Veggie Delight Wrap",
+              description:"A flavorful wrap filled with fresh vegetables, hummus, and tangy dressing.",
+              price: "$8.99",
+              rating: "⭐⭐⭐⭐",
+              thumbnail: "New food/Veggie Delight Wrap.jpeg"
+              },
+              {
               id: 3,
-              title: "Samsung Universe 9",
-              description: "Samsung's new variant which goes beyond Galaxy to the Universe",
-              price: 1249,
-              discountPercentage: 10.5,
-              rating: 4.75,
-              stock: 78,
-              amount: "95$",
-              brand: "Samsung",
-              category: "smartphones",
-              thumbnail: "https://i.dummyjson.com/data/products/3/thumbnail.jpg"
-            },
-            {
+              name :"Chocolate Lava Cake",
+              description:"A decadent chocolate cake with a molten, gooey center.",
+              price: "$6.99",
+              rating: "⭐⭐⭐⭐⭐",
+              thumbnail: "New food/Chocolate Lava Cake.jpg" 
+              },
+              {
               id: 4,
-              title: "Orange Essence Food Flavour",
-              description: "Specifications of Orange Essence Food Flavour For Cakes and Baking Food Item",
-              price: 14,
-              discount: 8.04,
-              rating: 4.85,
-              stock: 26,
-              amount: "45$",
-              brand: "Baking Food Items",
-              category: "Groceries",
-              thumbnail: "https://i.dummyjson.com/data/products/23/thumbnail.jpg"
-            },
-            {
+              Name: "Pad Thai",
+              description: "Embark on a culinary journey with this iconic Thai dish.",
+              price: "$6.99",
+              rating: "⭐⭐⭐⭐⭐",
+              thumbnail:"New food/Pad Thai.jpg"
+              },
+              {
               id: 5,
-              title: "Cereals Muesli Fruit Nuts",
-              description: "Original Fauji Cereal Muesli 250gm box pack original fauji cereals muesli fruit nuts flakes breakfast cereal break fast faujicereals cerels cerel foji fouji",
-              price: 46,
-              discount: 16.8,
-              rating: 4.94,
-              stock: 113,
-              amount: "87$",
-              brand: "Fauji",
-              category: "Groceries",
-              thumbnail: "https://i.dummyjson.com/data/products/24/thumbnail.jpg"
-            },
-            {
+              Name: "Tacos al Pastor",
+              description: "Transport yourself to the streets of Mexico with these flavorful tacos.",
+              price: "$8.99",
+              Rating: "⭐⭐⭐⭐⭐",
+              thumbnail: "New food/taco2.jpeg"
+              },
+              {
               id: 6,
-              title: "Gulab Powder 50 Gram",
-              description: "Dry Rose Flower Powder Gulab Powder 50 Gram • Treats Wounds",
-              price: 70,
-              discount: 13.58,
-              rating: 4.87,
-              stock: 47,
-              amount: "12$",
-              brand: "Dry Rose",
-              category: "Groceries",
-              thumbnail: "https://i.dummyjson.com/data/products/25/thumbnail.jpg"
-            },
-            {
+              Name: "Gyoza",
+              description: "Experience a burst of flavors with these crispy and juicy Japanese dumplings.",
+              price: "$6.9",
+              rating: "⭐⭐⭐⭐",
+              thumbnail:  "New food/Gyoza.jpeg"
+              },
+             
+              {
               id: 7,
-              title: "Plant Hanger For Home",
-              description: "Boho Decor Plant Hanger For Home Wall Decoration Macrame Wall Hanging Shelf",
-              price: 41,
-              discount: 17.86,
-              rating: 4.08,
-              stock: 131,
-              amount: "80$",
-              brand: "Bo",
-              category: "Home Decor",
-              thumbnail: "https://i.dummyjson.com/data/products/26/thumbnail.jpg"
-            },
-            {
+              name: "Sushi Rolls",
+              description:"Fresh seafood and vegetables wrapped in seasoned rice and seaweed.",
+              price: "$14.5",
+              rating: "⭐⭐⭐⭐⭐",
+              thumbnail: "New food/Sushi Rolls.jpeg"
+              },
+              {
               id: 8,
-              title: "Huawei P30",
-              description: "Huawei’s re-badged P30 Pro New Edition was officially unveiled yesterday in Germany and now the device has made its way to the UK.",
-              price: 499,
-              discountPercentage: 10.58,
-              rating: 4.09,
-              stock: 32,
-              amount: "97$",
-              brand: "Huawei",
-              category: "smartphones",
-              thumbnail: "https://i.dummyjson.com/data/products/5/thumbnail.jpg"
-            },
-            {
+              name: "Chicken Tikka Masala",
+              description: "Tender chicken cooked in a rich and creamy tomato-based sauce.",
+              price: "$11.9",
+              pating: "⭐⭐⭐⭐",
+              thumbnail: "New food/Chicken Tikka Masala.jpeg"
+              },
+              {
               id: 9,
-              title: "MacBook Pro",
-              description: "MacBook Pro 2021 with mini-LED display may launch between September, November",
-              price: 1749,
-              discountPercentage: 11.02,
-              rating: 4.57,
-              stock: 83,
-              amount: "67$",
-              brand: "Apple",
-              category: "laptops",
-              thumbnail: "https://i.dummyjson.com/data/products/6/thumbnail.png"
-            },
-            {
-              id: 10,
-              title: "Samsung Galaxy Book",
-              description: "Samsung Galaxy Book S (2020) Laptop With Intel Lakefield Chip, 8GB of RAM Launched",
-              price: 1499,
-              discountPercentage: 4.15,
-              rating: 4.25,
-              stock: 50,
-              amount: "90$",
-              brand: "Samsung",
-              category: "laptops",
-              thumbnail: "https://i.dummyjson.com/data/products/7/thumbnail.jpg"
-            },
-            {
-              id: 11,
-              title: "Microsoft Surface Laptop 4",
-              description: "Style and speed. Stand out on HD video calls backed by Studio Mics. Capture ideas on the vibrant touchscreen.",
-              price: 1499,
-              discountPercentage: 10.23,
-              rating: 4.43,
-              stock: 68,
-              amount: "76$",
-              brand: "Microsoft Surface",
-              category: "laptops",
-              thumbnail: "https://i.dummyjson.com/data/products/8/thumbnail.jpg"
-            },
-            {
-              id: 12,
-              title: "Sony PlayStation 5",
-              description: "Experience lightning-fast loading with an ultra-high-speed SSD, deeper immersion with support for haptic feedback, adaptive triggers, and 3D Audio, and an all-new generation of incredible PlayStation games.",
-              price: 499,
-              discountPercentage: 0,
-              rating: 4.85,
-              stock: 20,
-              amount: "39$",
-              brand: "Sony",
-              category: "gaming",
-              thumbnail: "https://i.dummyjson.com/data/products/9/thumbnail.jpg"
-            },
-          ];
-            const search =window.location.search
+              name: "Lobster Roll",
+              description: "Treat yourself to a taste of luxury with this decadent lobster roll. The tender lobster meat, creamy mayo, and buttery roll come together to create a truly indulgent experience.",
+              price: "$19.6",
+              rating : "⭐⭐⭐⭐⭐",
+              thumbnail: "New food/Lobster Roll.jpeg"
+              },
+              ];           
+               const search =window.location.search
             console.log(search)
 
             const query = new URLSearchParams(search)
@@ -334,38 +240,27 @@ catch(error) {
 			  pTag.classList.add("card-text")
 			  pTag.textContent = product.description;
 			  cardBod.appendChild(pTag)
-			  const HTag = document.createElement("a")
+			  const HTag = document.createElement("button")
 			  HTag.classList.add("btn", "btn-danger")
 			  HTag.textContent = "Order"
+        HTag.onclick = process_order
 			  pTag.appendChild(HTag)
+			
+			  // Display the price for each product
+		const pTagPrice = document.createElement("p");
+		pTagPrice.classList.add("card-text", "price"); // Add the "price" class here 
+		pTagPrice.textContent = "Price: " + product.price;
+		cardBod.appendChild(pTagPrice);
 
-			  // Create an image element
+			  //Create an image element
 			  const imageElement = document.createElement("img");
 			  imageElement.classList.add("card-img-bottom")
 			
 			  imageElement.onClick = "showSrc()"
 			  imageElement.src = product.thumbnail;
         imageElement.classList.add("pr_img")
-        
-        imageElement.addEventListener("mouseenter", () => {
-          var img_tag = document.querySelector(".pr_img")
-          var img_src = img_tag.src
-          //console.log("before enter effect",img_src)
-          var new_src = img_src.replace("1","2")
-          img_tag.src = new_src
-          //console.log(new_src)
-              });
 
-        imageElement.addEventListener("mouseleave", () => {
-          {
-            var img_tag = document.querySelector(".pr_img")
-            var img_src = img_tag.src
-            console.log("before leave effect",img_src)
-            var new_src = img_src.replace("2","1")
-            img_tag.src = new_src
-            console.log("after leave effect",img_tag.src)
-                } 
-        })
+		
 			  cardDiv.appendChild(imageElement);
 
         cardDiv.addEventListener("mouseenter", () => {
@@ -387,76 +282,73 @@ catch(error) {
             console.log("after leave effect",img_tag.src)
                 } 
         })
-		
+		productContainer.appendChild(productElement);
 
-		
-			  productContainer.appendChild(productElement);
+		</script>
 
-		
-	
-        </script>
+		<p class="mytext">Enter The Quantity </p>
+		<div class="quantity-container">
+			<input type="text" id="quantity" class="quantity-input" value="1">
+			<button onclick="increaseQuantity()" class="quantity-button">+</button>
+		</div>
 
-      <p class="mytext">Enter The Quantity </p>
-<div class="quantity-container">
-      <input type="text" id="quantity" class="quantity-input" value="1">
-      <button onclick="increaseQuantity()" class="quantity-button">+</button>
-</div>
-    
-    <script>
-      function increaseQuantity() {
-        var quantity = document.getElementById("quantity");
-        quantity.value = parseInt(quantity.value) + 1;
-      }
-    </script>
+		<script>
+		  function increaseQuantity() {
+			var quantity = document.getElementById("quantity");
+			quantity.value = parseInt(quantity.value) + 1;
+		  }
+		</script>
 
- <footer class=" sake text-light bg-danger">
+		<script>
+			function img_in()
+			{
+				var img_tag = document.querySelector(".pr_img")
+				var img_src = img_tag.src
+				var new_src = img_src.replace("1","2")
+				img_tag.src = new_src
+			} 
+			function img_out()
+			{
+				var img_tag = document.querySelector(".pr_img")
+				var img_src = img_tag.src
+				var new_src = img_src.replace("2","1")
+				img_tag.src = new_src
+			}
+		</script>
+	</div>
+</section>
+
+<footer class=" sake text-light bg-danger">
 	<div class="row">
-<div class="col">
-
-	<nav>
-		<ul class="nav justify-content-center flex-column">
-			<li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
-			<li class="nav-item"><a href="about us.html" class="nav-link">About Us</a></li>
-			<li class="nav-item"><a href="contact.html" class="nav-link">Contact</a></li>
-			<li class="nav-item"><a href="reservation.html" class="nav-link">reservation</a></li>
-		</ul>
-	</nav> 
-</div>
-
-<div class="col">
-    <h4>Address</h4>
-	<span>Address: 419,Main Street, Anytown, USA</span><br>
-	<img class="icon" src="images/icon4.png" alt="facebook Icon">
-	<span>phone number:+243 (555) 123-4567</span>
-</div>
-
-<div class="col">
-  <h4>Social Media Contact</h4>
-  <a href="https://www.facebook.com"><img class="icon" src="images/icon1.png" alt="Facebook Icon"></a>
-  <span><a href="https://www.facebook.com">facebook</a>
-  <a href="https://www.twitter.com"><img class="icon" src="images/icon4 .jpg.png" alt="Twitter Icon"></a>
-  <span><a href="https://www.twitter.com">twitter</a></span>
-  <a href="https://www.instagram.com"><img class="icon" src="images/icon3.jpeg" alt="Instagram Icon"></a>
-  <span><a href="https://www.instagram.com">Instagram</a></span>
-</div>
-    </div>
-   <p class="text-center">&copy; 2024 Ameer Restaurant. All rights reserved.</p>
-  </footer>
-  <script>
-    function img_in()
-    {
-var img_tag = document.querySelector(".pr_img")
-var img_src = img_tag.src
-var new_src = img_src.replace("1","2")
-img_tag.src = new_src
-    } 
-    function img_out()
-    {
-     var img_tag = document.querySelector(".pr_img")
-     var img_src = img_tag.src
-     var new_src = img_src.replace("2","1")
-     img_tag.src = new_src
-    }
-  </script>
+		<div class="col">
+			<nav>
+				<ul class="nav justify-content-center flex-column">
+					<li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
+					<li class="nav-item"><a href="about us.html" class="nav-link">About Us</a></li>
+					<li class="nav-item"><a href="contact.html" class="nav-link">Contact</a></li>
+					<li class="nav-item"><a href="reservation.html" class="nav-link">reservation</a></li>
+				</ul>
+			</nav> 
+		</div>
+  
+		<div class="col">
+			<h4>Address</h4>
+			<span>Address: 419,Main Street, Anytown, USA</span><br>
+			<img class="icon" src="images/icon4.png" alt="facebook Icon">
+			<span>phone number:+243 (555) 123-4567</span>
+		</div>
+  
+		<div class="col">
+			<h4>Social Media Contact</h4>
+			<a href="https://www.facebook.com"><img class="icon" src="images/icon1.png" alt="Facebook Icon"></a>
+			<span><a href="https://www.facebook.com">facebook</a>
+			<a href="https://www.twitter.com"><img class="icon" src="images/icon4 .jpg.png" alt="Twitter Icon"></a>
+			<span><a href="https://www.twitter.com">twitter</a></span>
+			<a href="https://www.instagram.com"><img class="icon" src="images/icon3.jpeg" alt="Instagram Icon"></a>
+			<span><a href="https://www.instagram.com">Instagram</a></span>
+		</div>
+	</div>
+	<p class="text-center">&copy; 2024 Ameer Restaurant. All rights reserved.</p>
+</footer>
 </body>
 </html>
